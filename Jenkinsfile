@@ -145,7 +145,7 @@ pipeline {
                         }
                     }
                 }
-                sh "docker run --name ${DOCKER_CONTAINER_NAME} -d -p ${DOCKER_PORT}:8080 ${DOCKER_IMAGE}"
+                sh "docker run --name ${DOCKER_CONTAINER_NAME} -d -p ${DOCKER_PORT}:8095 ${DOCKER_IMAGE} -Dspring.profiles.active=qua"
             }
         }
     }
