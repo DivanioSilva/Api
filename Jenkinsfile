@@ -11,8 +11,8 @@ pipeline {
         NEXUS_REPOSITORY_RELEASE = "maven-nexus-repo-release/"
         NEXUS_REPOSITORY_SNAPSHOT = "maven-nexus-repo-snapshot/"
         NEXUS_CREDENTIAL_ID = "nexus3"
-        REPOSITORY = "https://github.com/DivanioSilva/Laboratory.git"
-        REGISTRY = "dcsilva/laboratory"
+        REPOSITORY = "https://github.com/DivanioSilva/Api.git"
+        REGISTRY = "dcsilva/api"
         REGISTRY_CREDENTIAL = "DockerHub"
         DOCKER_IMAGE = ''
         DOCKER_IMAGE_NAME_OLD = ''
