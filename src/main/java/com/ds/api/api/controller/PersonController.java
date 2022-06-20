@@ -1,6 +1,7 @@
 package com.ds.api.api.controller;
 
 import com.ds.api.api.clients.PersonClient;
+import com.ds.api.api.clients.PersonRestTemplate;
 import com.ds.api.api.domain.PersonDto;
 import com.ds.api.api.domain.PersonWithIdDto;
 import com.ds.api.api.exceptions.PersonNotFoundException;
@@ -15,10 +16,11 @@ import java.util.List;
 @RequestMapping(value = "person/")
 public class PersonController {
     private final PersonClient personClient;
-
+    private final PersonRestTemplate personRestTemplate;
     @PostMapping
     public PersonWithIdDto savePerson(@RequestBody PersonDto personDto){
         return this.personClient.createPerson(personDto);
+        //return this.personRestTemplate.save(personDto);
     }
 
     @GetMapping(value = "all",produces = MediaType.APPLICATION_JSON_VALUE)
