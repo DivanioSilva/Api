@@ -14,6 +14,7 @@
     <name>Api</name>
     <description>Api</description>
     <properties>
+        <docker_port>8095</docker_port>
         <java.version>17</java.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
     </properties>
@@ -36,6 +37,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.9</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
