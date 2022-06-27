@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(value = "personClient", url = "http://localhost:8092/person")
+@FeignClient(value = "personClient", url = "http://192.168.1.149:8092/person")
 public interface PersonClient {
 
     @PostMapping(value = "/")
