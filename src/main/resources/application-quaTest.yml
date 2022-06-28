@@ -1,0 +1,1 @@
+server:  port: 8081api:  version: "@api.version@"person:  ms:    url: "http://divanio.ddns.net:8092/person"
