@@ -18,7 +18,13 @@ public interface PersonClient {
     @GetMapping(value = "/all")
     List<PersonWithIdDto> getAllPersons();
 
-    @PutMapping(value = "{personId}", produces = MediaType.APPLICATION_JSON_VALUE,
+    @GetMapping(value = "/first-name/{first-name}")
+    List<PersonWithIdDto> findByFirstName(@PathVariable("first-name") String firstName);
+
+    @PutMapping(value = "/id/{personId}", produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     PersonDto updatePerson(@PathVariable Long personId, @RequestBody PersonDto person) throws PersonNotFoundException;
+
+    @DeleteMapping(value = "/id/{personId}")
+    void deleteById(@PathVariable("personId") Long personId);
 }
